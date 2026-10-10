@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Organisasi - IMATIKA FTUP</title>
+    <style>
+        /* Reset & Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 2px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fdbb2d;
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #fdbb2d;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Banner Image */
+        .banner-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* List Styling */
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        dl {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #1e3c72;
+            border-radius: 4px;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-top: 8px;
+        }
+
+        dd {
+            margin-left: 15px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Contact Section & External Links */
+        .btn-link {
+            display: inline-block;
+            background-color: #1e3c72;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-link:hover {
+            background-color: #2a5298;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3c72;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigasi (Persyaratan: Internal Anchor Link & Gambar 1 dengan Alt) -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <!-- Gambar 1 dengan Alt -->
+                <img src="Screenshot 2026-09-22 220706.png"Logo IMATIKA FTUP">
+                <span class="logo-text">IMATIKA FTUP</span>
+            </div>
+            <nav>
+                <ul>
+                    <!-- Link 1 & 2: Anchor Internal -->
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#divisi">Divisi</a></li>
+                    <li><a href="#pendaftaran">Pendaftaran</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Section Profil -->
+        <section id="profil" class="card">
+            <h2>Tentang IMATIKA FTUP</h2>
+            <p>
+                <strong>IMATIKA FTUP</strong> adalah Ikatan Mahasiswa Teknik Informatika Fakultas Teknik Universitas Pancasila. 
+                Organisasi ini berdedikasi untuk mengembangkan potensi mahasiswa dalam bidang teknologi informasi, 
+                kepemimpinan, serta pengabdian masyarakat.
+            </p>
+            <!-- Gambar 2 dengan Alt -->
+            <img src="Screenshot 2026-09-22 220706.png">
+        </section>
+
+        <!-- Section 3 Tipe List -->
+        
+        <!-- Tipe List 1: Unordered List (<ul>) -->
+        <section id="divisi" class="card">
+            <h2>Divisi Organisasi</h2>
+            <p>Berikut adalah divisi-divisi internal dalam struktur IMATIKA FTUP:</p>
+            <ul>
+                <li>Bidang Akademik</li>
+                <li>Bidang Minat Bakat</li>
+                <li>Bidang Kesejahteraan Mahasiswa</li>
+                <li>Divisi Humas & Inventaris</li>
+            </ul>
+        </section>
+
+        <!-- Tipe List 2: Ordered List (<ol>) -->
+        <section id="pendaftaran" class="card">
+            <h2>Alur Pendaftaran Anggota Baru</h2>
+            <p>Tahapan untuk menjadi bagian dari pengurus IMATIKA FTUP:</p>
+            <ol>
+                <li>Mengisi formulir pendaftaran secara online.</li>
+                <li>Mengikuti sesi wawancara dan uji kompetensi dasar.</li>
+                <li>Mengikuti kegiatan Latihan Keterampilan Manajemen Mahasiswa (LKMM).</li>
+                <li>Pengumuman kelulusan dan pelantikan anggota baru.</li>
+            </ol>
+        </section>
+
+        <!-- Tipe List 3: Description List (<dl>) -->
+        <section class="card">
+            <h2>Istilah Kunci Organisasi (Description List)</h2>
+            <dl>
+                <dt>FTUP</dt>
+                <dd>Fakultas Teknik Universitas Pancasila, wadah utama tempat organisasi ini bernaung.</dd>
+                
+                <dt>Kaderisasi</dt>
+                <dd>Proses pembentukan dan penanaman nilai-nilai kepemimpinan bagi calon pengurus baru.</dd>
+                
+                <dt>Proker (Program Kerja)</dt>
+                <dd>Rangkaian agenda kegiatan tahunan yang dirancang untuk meningkatkan kualitas mahasiswa.</dd>
+            </dl>
+        </section>
+
+        <!-- Section Kontak & External Link -->
+        <section id="kontak" class="card">
+            <h2>Hubungi Kami</h2>
+            <p>Jika ada pertanyaan terkait pendaftaran atau kerja sama, silakan hubungi kami:</p>
+            <br>
+            
+            <!-- Link External 1 -->
+            <li>Instagram: <a href="https://www.instagram.com/imatika_ftkmup?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank">imatika_ftkmup</a></li>
+            <!-- Link External 2 -->
+            <li>Website Resmi: <a href="http://teknik.univpancasila.ac.id/informatika/index.php/accordion-1/221-imatika-ft-kmup" target="_blank">imatika-ft-kmup</a></li>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IMATIKA FTUP - Fakultas Teknik Universitas Pancasila</p>
+    </footer>
+
+</body>
+</html>
