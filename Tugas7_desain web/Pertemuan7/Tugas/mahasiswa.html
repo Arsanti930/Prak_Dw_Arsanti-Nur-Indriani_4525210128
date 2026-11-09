@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Form registrasi mahasiswa baru untuk latihan HTML form." />
+    <title>Registrasi Mahasiswa | Arsanti Nur Indriani</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro-panel" aria-labelledby="intro-title">
+        <a class="brand" href="mahasiswa.html" aria-label="Akademia, halaman registrasi">
+          <span class="brand-symbol">A</span>
+          <span><strong>Akademia</strong><small>Portal Pendaftaran</small></span>
+        </a>
+        <div class="intro-copy">
+          <p class="eyebrow">PENERIMAAN MAHASISWA</p>
+          <h1 id="intro-title">Mulai perjalanan akademikmu <em>di sini.</em></h1>
+          <p class="intro-description">Lengkapi formulir registrasi dengan data yang benar. Pastikan seluruh informasi telah diperiksa sebelum dikirim.</p>
+          <ol class="step-list">
+            <li><span>01</span><div><strong>Isi data diri</strong><small>Lengkapi informasi dasar mahasiswa.</small></div></li>
+            <li><span>02</span><div><strong>Pilih program studi</strong><small>Tentukan bidang studi yang diminati.</small></div></li>
+            <li><span>03</span><div><strong>Kirim pendaftaran</strong><small>Periksa kembali data sebelum dikirim.</small></div></li>
+          </ol>
+        </div>
+        <div class="intro-footer"><span class="footer-mark">✳</span><span>Form latihan HTML5 · Praktikum Desain Web A</span></div>
+        <div class="decor decor-one" aria-hidden="true"></div>
+        <div class="decor decor-two" aria-hidden="true"></div>
+      </section>
+
+      <section class="form-area" aria-labelledby="form-title">
+        <div class="form-topline"><span class="form-step">FORM 01 / REGISTRASI</span><span class="secure-note">● Data formulir</span></div>
+        <div class="form-card">
+          <header class="form-header">
+            <span class="form-icon" aria-hidden="true">✎</span>
+            <p class="eyebrow">FORMULIR PENDAFTARAN</p>
+            <h2 id="form-title">Registrasi Mahasiswa Baru</h2>
+            <p>Silakan isi kolom berikut sesuai dengan data diri Anda.</p>
+          </header>
+
+          <!--
+            Method POST digunakan untuk mengirim data registrasi melalui body HTTP request.
+            Endpoint ini merupakan placeholder dan memerlukan backend untuk memproses data.
+            enctype diperlukan agar file foto ikut dikirim sebagai multipart/form-data.
+          -->
+          <form action="/submit-registration" method="post" enctype="multipart/form-data" class="registration-form">
+            <div class="form-group">
+              <label for="nama">Nama lengkap <span>*</span></label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" autocomplete="name" minlength="3" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nim">Nomor Induk Mahasiswa <span>*</span></label>
+                <input type="text" id="nim" name="nim" placeholder="Contoh: 4525210128" inputmode="numeric" pattern="[0-9]{8,10}" title="NIM harus berupa 8 sampai 10 digit angka" required />
+                <small class="field-hint">Masukkan 8–10 digit angka.</small>
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat email <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email" required />
+              </div>
+            </div>
+
+            <fieldset class="form-group option-field">
+              <legend>Jenis kelamin <span>*</span></legend>
+              <div class="choice-row">
+                <label class="choice-card"><input type="radio" name="gender" value="Perempuan" required /><span class="choice-indicator"></span><span>Perempuan</span></label>
+                <label class="choice-card"><input type="radio" name="gender" value="Laki-laki" /><span class="choice-indicator"></span><span>Laki-laki</span></label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="prodi">Program studi <span>*</span></label>
+              <select id="prodi" name="prodi" required>
+                <option value="">Pilih program studi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+                <option value="Teknik Industri">Teknik Industri</option>
+                <option value="Teknik Sipil">Teknik Sipil</option>
+              </select>
+            </div>
+
+            <fieldset class="form-group option-field">
+              <legend>Minat dan hobi</legend>
+              <div class="choice-row choice-row-wrap">
+                <label class="choice-card"><input type="checkbox" name="hobi[]" value="Membaca" /><span class="check-indicator"></span><span>Membaca</span></label>
+                <label class="choice-card"><input type="checkbox" name="hobi[]" value="Olahraga" /><span class="check-indicator"></span><span>Olahraga</span></label>
+                <label class="choice-card"><input type="checkbox" name="hobi[]" value="Musik" /><span class="check-indicator"></span><span>Musik</span></label>
+                <label class="choice-card"><input type="checkbox" name="hobi[]" value="Desain" /><span class="check-indicator"></span><span>Desain</span></label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="foto">Unggah foto <span>*</span></label>
+              <input class="file-input" type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png,image/jpeg,image/png" required />
+              <small class="field-hint">Format yang diterima: JPG, JPEG, atau PNG.</small>
+            </div>
+
+            <label class="agreement"><input type="checkbox" name="persetujuan" value="setuju" required /><span>Saya menyatakan bahwa data yang diisi sudah benar.</span></label>
+
+            <div class="button-group">
+              <button class="button button-primary" type="submit">Kirim pendaftaran <span aria-hidden="true">→</span></button>
+              <button class="button button-reset" type="reset">Reset formulir</button>
+            </div>
+            <p class="form-note"><span>*</span> Wajib diisi. Validasi menggunakan fitur bawaan HTML5.</p>
+          </form>
+        </div>
+        <footer class="form-footer"><span>© 2026 Akademia</span><span>Praktikum Desain Web A · Pertemuan 7</span></footer>
+      </section>
+    </main>
+  </body>
+</html>

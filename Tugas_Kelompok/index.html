@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omakase Dining Experience | Dashboard & Reservasi</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Google untuk kesan elegan khas Omakase -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR (<nav>) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-badge">🍣</span>
+        <span class="logo-text">REN OMAKASE</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#beranda" class="active">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a href="#reservasi" class="btn btn-primary nav-btn">Reservasi</a>
+    </div>
+  </nav>
+
+  <!-- LAYOUT UTAMA (<main>) -->
+  <main>
+    
+    <!-- HEAD BANNER -->
+    <section id="beranda" class="head-banner">
+      <img src="ren_omakase.png" alt="Tampak depan restoran REN OMAKASE" class="banner-img">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <span class="tagline">EKSKLUSIF & AUTENTIK</span>
+        <h1 class="headline-1">Nikmati Seni Kuliner Omakase Jepang Terbaik</h1>
+        <p class="subheadline">
+          Pengalaman santap eksklusif di mana Chef menyajikan hidangan mahakarya segar secara langsung di hadapan Anda.
+        </p>
+        <div class="banner-actions">
+          <a href="#reservasi" class="btn btn-primary">Daftar Reservasi Meja</a>
+          <a href="#layanan" class="btn btn-secondary">Lihat Menu Chef</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREA KONTEN UTAMA (.content) -->
+    <section class="content">
+      
+      <!-- TENTANG & STATS -->
+      <div id="tentang" class="section-block">
+        <div class="section-header">
+          <span class="section-tag">TENTANG KAMI</span>
+          <h2 class="headline-2">Filosofi Kelezatan Tanpa Batas</h2>
+          <p class="body-text">
+            "Omakase" berarti mempercayakan segalanya kepada Chef. Kami menghadirkan bahan-bahan musiman terbaik yang diterbangkan langsung dari Pasar Toyosu, Tokyo.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>12</h3>
+            <p>Kursi Eksklusif / Sesi</p>
+          </div>
+          <div class="stat-card">
+            <h3>18+</h3>
+            <p>Course Menu Santap</p>
+          </div>
+          <div class="stat-card">
+            <h3>3</h3>
+            <p>Master Chef Tokyo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LAYANAN / MENU HIGHLIGHT (CARDS) -->
+      <div id="layanan" class="section-block">
+        <div class="section-header">
+          <span class="section-tag">LAYANAN & SET MENU</span>
+          <h2 class="headline-2">Pilihan Paket Dining Omakase</h2>
+        </div>
+
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-badge">Lunch Course</div>
+            <h3 class="headline-3">Matsu Experience</h3>
+            <p class="card-price">Rp 1.800.000 <span>/ pax</span></p>
+            <ul class="card-list">
+              <li>12 Items Seasonal Nigiri</li>
+              <li>Sashimi Selection</li>
+              <li>Chawanmushi & Miso Soup</li>
+              <li>Matcha Dessert</li>
+            </ul>
+            <a href="#reservasi" class="btn btn-outline">Pilih Paket</a>
+          </div>
+
+          <!-- Card 2 (Featured) -->
+          <div class="card card-featured">
+            <div class="card-badge badge-gold">Dinner Choice</div>
+            <h3 class="headline-3">Kiwa Signature</h3>
+            <p class="card-price">Rp 2.800.000 <span>/ pax</span></p>
+            <ul class="card-list">
+              <li>18 Complete Omakase Courses</li>
+              <li>A5 Wagyu & Uni Tasting</li>
+              <li>Premium Chef Specialty Dishes</li>
+              <li>Japanese Seasonal Fruit</li>
+            </ul>
+            <a href="#reservasi" class="btn btn-primary">Pilih Paket</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-badge">Private Event</div>
+            <h3 class="headline-3">VIP Full Omakase</h3>
+            <p class="card-price">Rp 3.500.000 <span>/ pax</span></p>
+            <ul class="card-list">
+              <li>Eksklusif Ruang VIP (Sake Pairing)</li>
+              <li>Customized Menu oleh Head Chef</li>
+              <li>Personalized Table Decoration</li>
+              <li>Private Butler Service</li>
+            </ul>
+            <a href="#reservasi" class="btn btn-outline">Pilih Paket</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FASILITAS -->
+      <div id="fasilitas" class="section-block bg-light">
+        <div class="section-header">
+          <span class="section-tag">FASILITAS RESTORAN</span>
+          <h2 class="headline-2">Suasana Otentik & Nyaman</h2>
+        </div>
+        <div class="facility-grid">
+          <div class="facility-item">
+            <div class="facility-icon">🍣</div>
+            <h4 class="headline-4">Hinoki Wood Counter</h4>
+            <p class="body-text">Meja kayu Hinoki asli Jepang untuk kenyamanan maksimal saat berinteraksi dengan Chef.</p>
+          </div>
+          <div class="facility-item">
+            <div class="facility-icon">🍶</div>
+            <h4 class="headline-4">Sake Cellar Collection</h4>
+            <p class="body-text">Koleksi Sake langka dan Premium Wine untuk menyempurnakan hidangan Omakase Anda.</p>
+          </div>
+          <div class="facility-item">
+            <div class="facility-icon">🅿️</div>
+            <h4 class="headline-4">Valet & Private Parking</h4>
+            <p class="body-text">Layanan parkir valet gratis dan aman untuk seluruh tamu undangan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM PENDAFTARAN / RESERVASI -->
+      <div id="reservasi" class="section-block">
+        <div class="form-container">
+          <div class="section-header align-left" id="form-header">
+            <span class="section-tag">PENDAFTARAN ONLINE</span>
+            <h2 class="headline-2">Formulir Reservasi Meja Omakase</h2>
+            <p class="body-text">Silakan isi formulir di bawah ini untuk mengamankan slot sesi dining Anda.</p>
+          </div>
+
+          <form class="reservation-form" id="reservation-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Contoh: Taro Yamada" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" placeholder="nama@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="paket">Pilihan Paket Omakase</label>
+                <select id="paket">
+                  <option value="matsu">Matsu Experience (Lunch)</option>
+                  <option value="kiwa" selected>Kiwa Signature (Dinner)</option>
+                  <option value="vip">VIP Full Omakase (Private)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="jumlah">Jumlah Tamu (Pax)</label>
+                <input type="number" id="jumlah" min="1" max="6" value="2" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tanggal">Tanggal Santap</label>
+                <input type="date" id="tanggal" required>
+              </div>
+              <div class="form-group">
+                <label for="sesi">Sesi Jam Dining</label>
+                <select id="sesi">
+                  <option>Sesi 1: 12.00 - 14.00 WIB</option>
+                  <option>Sesi 2: 17.30 - 19.30 WIB</option>
+                  <option>Sesi 3: 20.00 - 22.00 WIB</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="catatan">Catatan Khusus / Alergi Makanan</label>
+              <textarea id="catatan" rows="3" placeholder="Sebutkan jika ada alergi udang, kepiting, atau pantangan makanan tertentu..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Konfirmasi Pendaftaran Reservasi</button>
+          </form>
+
+          <!-- KONFIRMASI RESERVASI -->
+          <div class="confirmation" id="confirmation" hidden role="status" aria-live="polite">
+            <div class="confirm-icon">✓</div>
+            <h3 class="confirm-title">Reservasi Berhasil</h3>
+            <p class="confirm-detail" id="confirm-detail"></p>
+            <p class="confirm-email" id="confirm-email"></p>
+            <button type="button" class="btn-confirm" id="btn-again">Buat Reservasi Lagi</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER (<footer>) -->
+  <footer id="kontak" class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-badge">🍣</span>
+          <span class="logo-text">REN OMAKASE</span>
+        </div>
+        <p>Restoran Omakase otentik dengan pengalaman kuliner eksklusif dan bahan segar kualitas terbaik.</p>
+      </div>
+
+      <div class="footer-info">
+        <h4>Jam Operasional</h4>
+        <p>Selasa - Minggu: 12.00 - 22.00 WIB</p>
+        <p>Senin: Tutup (Restoration Day)</p>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Kontak & Lokasi</h4>
+        <p>📍 Jl. Senopati No. 88, Jakarta Selatan</p>
+        <p>📞 +62 812-3456-7890</p>
+        <p>✉️ reservation@renomakase.id</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 REN OMAKASE Restaurant. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    const form = document.getElementById('reservation-form');
+    const header = document.getElementById('form-header');
+    const box = document.getElementById('confirmation');
+    const dateInput = document.getElementById('tanggal');
+
+    // Tanggal tidak boleh sebelum hari ini
+    const today = new Date();
+    dateInput.min = today.getFullYear() + '-' +
+      String(today.getMonth() + 1).padStart(2, '0') + '-' +
+      String(today.getDate()).padStart(2, '0');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const paketSel = document.getElementById('paket');
+      const sesiSel = document.getElementById('sesi');
+      const pax = document.getElementById('jumlah').value;
+      const paket = paketSel.options[paketSel.selectedIndex].text;
+      const sesi = sesiSel.options[sesiSel.selectedIndex].text;
+      const tanggal = new Date(dateInput.value + 'T00:00:00').toLocaleDateString('id-ID', {
+        day: 'numeric', month: 'long', year: 'numeric'
+      });
+
+      document.getElementById('confirm-detail').innerHTML =
+        pax + ' tamu · ' + tanggal + ' · ' + sesi + '<br>' + paket;
+      document.getElementById('confirm-email').textContent =
+        'Detail reservasi dikirim ke ' + document.getElementById('email').value;
+
+      form.hidden = true;
+      header.hidden = true;
+      box.hidden = false;
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    document.getElementById('btn-again').addEventListener('click', function () {
+      form.reset();
+      box.hidden = true;
+      form.hidden = false;
+      header.hidden = false;
+      document.getElementById('reservasi').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Form pendaftaran kursus Ilustrasi & Desain Digital.">
+  <title>Daftar Kursus | Kanvas Kreatif</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Kanvas Kreatif, beranda">
+      <span class="brand-dot" aria-hidden="true"></span>
+      Kanvas<span>Kreatif</span>
+    </a>
+    <span class="header-tag">Kelas Pertemuan 8 · Form Lanjutan</span>
+  </header>
+
+  <main class="layout">
+    <aside class="side-panel" aria-labelledby="course-title">
+      <p class="kicker">Batch 2026 · Terbatas 20 peserta</p>
+      <h1 id="course-title">Mulai <span class="hl">Ilustrasi</span> Digitalmu.</h1>
+      <p class="lead">Kursus praktis 6 pertemuan untuk pemula. Dari sketsa pertama hingga karya siap pamer di media sosial.</p>
+
+      <ul class="perks">
+        <li><span class="perk-icon" aria-hidden="true">01</span> Modul digital dan file latihan</li>
+        <li><span class="perk-icon" aria-hidden="true">02</span> Studio praktik dengan tablet</li>
+        <li><span class="perk-icon" aria-hidden="true">03</span> Mentor dengan portofolio nyata</li>
+      </ul>
+
+      <div class="price-card">
+        <span>Biaya kursus</span>
+        <strong>Rp 750.000</strong>
+        <small>Pembayaran via transfer bank, lalu unggah bukti di formulir.</small>
+      </div>
+    </aside>
+
+    <section class="form-panel" aria-labelledby="form-title">
+      <header class="form-head">
+        <span class="step">FORMULIR PENDAFTARAN</span>
+        <h2 id="form-title">Daftar Kursus</h2>
+        <p>Isi data dengan benar. Tanda <span class="req">*</span> wajib diisi.</p>
+      </header>
+
+      <!-- action="#" adalah placeholder front-end. Ganti ke endpoint server
+           dan validasi ulang seluruh data di sisi server. -->
+      <form action="#" method="post" enctype="multipart/form-data" class="reg-form">
+
+        <!-- ===== BAGIAN 1: DATA DIRI ===== -->
+        <fieldset class="block">
+          <legend><span class="num">01</span> Data diri</legend>
+
+          <div class="field">
+            <label for="nama">Nama lengkap <span class="req">*</span></label>
+            <input type="text" id="nama" name="nama"
+                   placeholder="Contoh: Arsanti Nur Indriani"
+                   required minlength="3" maxlength="60"
+                   autocomplete="name">
+            <small class="hint">Minimal 3 karakter, maksimal 60 karakter.</small>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="email">Email aktif <span class="req">*</span></label>
+              <input type="email" id="email" name="email"
+                     placeholder="nama@email.com"
+                     required autocomplete="email">
+              <small class="hint">Jadwal dan materi dikirim ke email ini.</small>
+            </div>
+
+            <div class="field">
+              <label for="whatsapp">No. WhatsApp <span class="req">*</span></label>
+              <input type="tel" id="whatsapp" name="whatsapp"
+                     placeholder="081234567890"
+                     required
+                     pattern="08[0-9]{8,11}"
+                     minlength="10" maxlength="13"
+                     title="Nomor harus diawali 08 dan berisi 10 sampai 13 digit angka."
+                     autocomplete="tel">
+              <small class="hint">Diawali 08, 10–13 digit angka.</small>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ===== BAGIAN 2: PILIHAN KURSUS ===== -->
+        <fieldset class="block">
+          <legend><span class="num">02</span> Pilihan kursus</legend>
+
+          <div class="field">
+            <label for="kursus">Kursus yang dipilih <span class="req">*</span></label>
+            <div class="select-wrap">
+              <select id="kursus" name="kursus" required>
+                <option value="" selected disabled>— Pilih kursus —</option>
+                <option value="ilustrasi">Ilustrasi Digital Dasar</option>
+                <option value="komik">Komik & Storyboard</option>
+                <option value="ui">Desain Antarmuka (UI) Pemula</option>
+                <option value="fotografi">Fotografi Produk Rumahan</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="legend-like" id="jadwal-label">Jadwal kelas <span class="req">*</span></span>
+            <div class="radio-grid" role="radiogroup" aria-labelledby="jadwal-label">
+              <label class="radio-card">
+                <input type="radio" name="jadwal" value="pagi" required>
+                <span class="card-body">
+                  <strong>Pagi</strong>
+                  <small>Sabtu, 09.00–11.00</small>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="jadwal" value="sore">
+                <span class="card-body">
+                  <strong>Sore</strong>
+                  <small>Selasa &amp; Kamis, 16.00–18.00</small>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="jadwal" value="akhir-pekan">
+                <span class="card-body">
+                  <strong>Akhir pekan</strong>
+                  <small>Minggu, 13.00–16.00</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend class="legend-like">Fasilitas tambahan <small class="optional">(opsional)</small></legend>
+            <div class="check-grid">
+              <label class="check-chip">
+                <input type="checkbox" name="fasilitas[]" value="sertifikat">
+                <span class="box" aria-hidden="true"></span> Sertifikat cetak
+              </label>
+              <label class="check-chip">
+                <input type="checkbox" name="fasilitas[]" value="modul">
+                <span class="box" aria-hidden="true"></span> Modul cetak
+              </label>
+              <label class="check-chip">
+                <input type="checkbox" name="fasilitas[]" value="konsultasi">
+                <span class="box" aria-hidden="true"></span> Konsultasi 1-on-1
+              </label>
+              <label class="check-chip">
+                <input type="checkbox" name="fasilitas[]" value="tablet">
+                <span class="box" aria-hidden="true"></span> Sewa tablet
+              </label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <!-- ===== BAGIAN 3: MOTIVASI & PEMBAYARAN ===== -->
+        <fieldset class="block">
+          <legend><span class="num">03</span> Motivasi & pembayaran</legend>
+
+          <div class="field">
+            <label for="motivasi">Ceritakan tujuanmu ikut kursus <span class="req">*</span></label>
+            <textarea id="motivasi" name="motivasi" rows="5"
+                      placeholder="Misalnya: ingin membuat ilustrasi untuk buku anak milik sendiri..."
+                      required minlength="20" maxlength="300"></textarea>
+            <small class="hint">Minimal 20 karakter, maksimal 300 karakter.</small>
+          </div>
+
+          <div class="field">
+            <label for="bukti">Bukti pembayaran <span class="req">*</span></label>
+            <label class="file-drop" for="bukti">
+              <span class="file-icon" aria-hidden="true">↑</span>
+              <span class="file-text"><strong>Pilih berkas</strong> JPG, PNG, atau PDF</span>
+              <input type="file" id="bukti" name="bukti"
+                     accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf"
+                     required>
+            </label>
+            <small class="hint">Format: JPG, PNG, atau PDF. Ukuran maksimal 2 MB (diperiksa server).</small>
+          </div>
+        </fieldset>
+
+        <!-- ===== PERSETUJUAN ===== -->
+        <div class="agree">
+          <label class="agree-label">
+            <input type="checkbox" name="setuju" value="ya" required>
+            <span class="box" aria-hidden="true"></span>
+            <span>Saya menyetujui <strong>aturan kelas</strong> dan bersedia hadir minimal 80% dari total pertemuan. <span class="req">*</span></span>
+          </label>
+        </div>
+
+        <!-- ===== TOMBOL: submit, reset, button ===== -->
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Daftar sekarang →</button>
+          <button type="reset" class="btn btn-ghost">Bersihkan form</button>
+          <button type="button" class="btn btn-outline" aria-describedby="cek-note">Cek ringkasan</button>
+        </div>
+        <p id="cek-note" class="note">Tombol “Cek ringkasan” bertipe <code>button</code>: tidak mengirim data dan belum memiliki aksi (aksi JavaScript belum dipakai di pertemuan ini).</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Kanvas Kreatif</span>
+    <span>Tugas Praktikum Desain Web · Pertemuan 8</span>
+  </footer>
+</body>
+</html>

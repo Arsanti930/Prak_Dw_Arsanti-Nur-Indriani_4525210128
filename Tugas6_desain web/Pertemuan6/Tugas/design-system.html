@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dokumentasi Simple Design System Ruang Akademik." />
+    <title>Design System | Ruang Akademik</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="design-page">
+      <header class="design-header">
+        <div>
+          <p class="eyebrow">PERTEMUAN 6 · DESAIN WEB</p>
+          <h1>Simple Design System</h1>
+          <p>Pedoman warna, tipografi, jarak, tombol, form controls, dan card untuk Ruang Akademik.</p>
+        </div>
+        <a class="design-back" href="index.html">← Kembali ke dashboard</a>
+      </header>
+
+      <div class="design-grid">
+        <section class="design-section full">
+          <h2>01 · Color palette</h2>
+          <p>Palet utama memakai warna hijau-teal dan warna pendukung hangat agar hierarki visual tetap jelas.</p>
+          <div class="swatch-grid">
+            <div class="swatch"><div class="swatch-color" style="background:#185b55"></div><small>Primary<br />#185B55</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#d27a55"></div><small>Secondary<br />#D27A55</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#8e82bd"></div><small>Accent<br />#8E82BD</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#253b38"></div><small>Text<br />#253B38</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#f4f6f1"></div><small>Background<br />#F4F6F1</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#277b5b"></div><small>Success<br />#277B5B</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#a56b24"></div><small>Warning<br />#A56B24</small></div>
+            <div class="swatch"><div class="swatch-color" style="background:#486f9a"></div><small>Info<br />#486F9A</small></div>
+          </div>
+        </section>
+
+        <section class="design-section">
+          <h2>02 · Typography</h2>
+          <p>System font stack tanpa font eksternal.</p>
+          <div class="type-scale">
+            <div class="type-row"><strong style="font-size:32px">Heading 1</strong><span>32 px · Bold</span></div>
+            <div class="type-row"><strong style="font-size:24px">Heading 2</strong><span>24 px · Bold</span></div>
+            <div class="type-row"><strong style="font-size:20px">Heading 3</strong><span>20 px · Semibold</span></div>
+            <div class="type-row"><span style="font-size:16px">Body text</span><span>16 px · Regular</span></div>
+            <div class="type-row"><span style="font-size:14px">Secondary text</span><span>14 px · Regular</span></div>
+            <div class="type-row"><span style="font-size:12px">Caption / label</span><span>12 px · Medium</span></div>
+          </div>
+        </section>
+
+        <section class="design-section">
+          <h2>03 · Spacing scale</h2>
+          <p>Skala jarak menggunakan kelipatan 4 piksel.</p>
+          <div class="spacing-scale">
+            <div class="space-row"><span>4 px</span><span class="space-bar" style="width:4px"></span></div>
+            <div class="space-row"><span>8 px</span><span class="space-bar" style="width:8px"></span></div>
+            <div class="space-row"><span>12 px</span><span class="space-bar" style="width:12px"></span></div>
+            <div class="space-row"><span>16 px</span><span class="space-bar" style="width:16px"></span></div>
+            <div class="space-row"><span>24 px</span><span class="space-bar" style="width:24px"></span></div>
+            <div class="space-row"><span>32 px</span><span class="space-bar" style="width:32px"></span></div>
+            <div class="space-row"><span>48 px</span><span class="space-bar" style="width:48px"></span></div>
+            <div class="space-row"><span>64 px</span><span class="space-bar" style="width:64px"></span></div>
+          </div>
+        </section>
+
+        <section class="design-section">
+          <h2>04 · Buttons</h2>
+          <p>Semua tombol memiliki tinggi minimum 44 piksel dan radius konsisten.</p>
+          <div class="button-samples">
+            <a class="button sample-primary" href="#">Primary</a>
+            <a class="button sample-secondary" href="#">Secondary</a>
+            <a class="button sample-neutral" href="#">Outline</a>
+            <button class="button sample-disabled" type="button" disabled>Disabled</button>
+          </div>
+          <div class="token-note">State yang digunakan: default, hover, focus-visible, dan disabled.</div>
+        </section>
+
+        <section class="design-section">
+          <h2>05 · Form controls</h2>
+          <p>Label, input, select, dan textarea menggunakan pola visual yang sama.</p>
+          <div class="control-samples">
+            <label>Nama lengkap<input type="text" placeholder="Nama mahasiswa" /></label>
+            <label>Program studi<select><option>Pilih program studi</option><option>Teknik Informatika</option></select></label>
+            <label style="grid-column:1/-1">Catatan<textarea placeholder="Tulis catatan singkat"></textarea></label>
+          </div>
+        </section>
+
+        <section class="design-section full">
+          <h2>06 · Cards</h2>
+          <p>Card memakai surface putih, border netral, radius 14 piksel, padding seragam, dan shadow halus.</p>
+          <div class="sample-card">
+            <strong>Ringkasan akademik</strong>
+            <p>Contoh komponen card untuk menampung informasi yang saling berkaitan. Jarak antar elemen menggunakan token spacing.</p>
+          </div>
+          <div class="token-note">Token CSS tersimpan pada bagian :root dalam file css/style.css agar dapat dipakai ulang.</div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

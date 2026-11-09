@@ -1,0 +1,614 @@
+/* ==========================================================
+   Kanvas Kreatif — Form pendaftaran kursus (HTML5 + CSS3)
+   ========================================================== */
+
+:root {
+  --ink: #1d1a17;
+  --paper: #fbf6ee;
+  --card: #ffffff;
+  --coral: #e8553d;
+  --coral-deep: #c13f29;
+  --teal: #0f766e;
+  --sun: #f6c445;
+  --muted: #6d645b;
+  --line: #e7dccd;
+  --error: #b42318;
+  --error-bg: #fef3f2;
+  --radius: 16px;
+  --shadow: 0 18px 40px -22px rgba(29, 26, 23, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 0% 0%, #ffe8c7 0, transparent 35%),
+    radial-gradient(circle at 100% 100%, #d8f0ea 0, transparent 35%),
+    var(--paper);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+input, select, textarea, button { font: inherit; color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 6%;
+  background: var(--ink);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brand span { color: var(--sun); }
+
+.brand-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 14px -4px 0 var(--sun);
+}
+
+.header-tag {
+  font-size: 13px;
+  color: #d9d0c4;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- Layout dua kolom ---------- */
+.layout {
+  width: min(1120px, 92%);
+  margin: 40px auto 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+/* ---------- Panel kiri ---------- */
+.side-panel {
+  position: sticky;
+  top: 24px;
+  padding: 36px 32px;
+  border-radius: 24px;
+  background: var(--teal);
+  color: #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.side-panel::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -60px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: rgba(246, 196, 69, 0.35);
+}
+
+.side-panel > * { position: relative; }
+
+.kicker {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #bfe9e2;
+}
+
+.side-panel h1 {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.hl {
+  background: var(--sun);
+  color: var(--ink);
+  padding: 0 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: #e3f4f1;
+  font-size: 15px;
+}
+
+.perks {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.perks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.perk-icon {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.price-card {
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+}
+
+.price-card span { font-size: 13px; color: var(--muted); }
+
+.price-card strong {
+  display: block;
+  font-size: 30px;
+  color: var(--coral-deep);
+  line-height: 1.2;
+}
+
+.price-card small { color: var(--muted); font-size: 13px; }
+
+/* ---------- Panel form ---------- */
+.form-panel {
+  padding: 36px 36px 32px;
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.form-head { margin-bottom: 24px; }
+
+.step {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: var(--coral-deep);
+  background: #fde7e1;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.form-head h2 {
+  margin: 12px 0 6px;
+  font-size: 30px;
+  letter-spacing: -0.6px;
+}
+
+.form-head p { margin: 0; color: var(--muted); }
+
+.req { color: var(--coral-deep); font-weight: 700; }
+
+.optional { font-weight: 400; color: var(--muted); font-size: 13px; }
+
+/* Blok bagian */
+.block {
+  border: 0;
+  margin: 0 0 26px;
+  padding: 0;
+  min-width: 0;
+}
+
+.block > legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--ink);
+  color: var(--sun);
+  font-size: 13px;
+}
+
+/* Field umum */
+.field {
+  border: 0;
+  padding: 0;
+  margin: 0 0 16px;
+  min-width: 0;
+}
+
+.field > legend,
+.legend-like {
+  display: block;
+  padding: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.field > label:first-child {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: #fffdfa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea { resize: vertical; min-height: 120px; }
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.35);
+  outline-offset: 2px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+  outline: none;
+}
+
+/* Gaya status invalid hanya muncul setelah pengguna berinteraksi */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Select */
+.select-wrap { position: relative; }
+
+.select-wrap::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--teal);
+  font-size: 16px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* Radio sebagai kartu */
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.radio-card {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.radio-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  min-height: 74px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  background: #fffdfa;
+  transition: all 0.2s ease;
+}
+
+.card-body strong { font-size: 15px; }
+.card-body small { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+.radio-card input:checked + .card-body {
+  border-color: var(--coral);
+  background: #fff1ec;
+  box-shadow: inset 0 0 0 1px var(--coral);
+}
+
+.radio-card input:focus-visible + .card-body {
+  outline: 3px solid rgba(15, 118, 110, 0.35);
+  outline-offset: 2px;
+}
+
+.radio-card:hover .card-body { border-color: var(--teal); }
+
+/* Checkbox sebagai chip */
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.check-chip,
+.agree-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  min-height: 48px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: #fffdfa;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.check-chip input,
+.agree-label input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.check-chip:hover,
+.agree-label:hover { border-color: var(--teal); }
+
+.box {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #b9aa98;
+  border-radius: 7px;
+  background: #fff;
+  position: relative;
+}
+
+.check-chip input:checked ~ .box,
+.agree-label input:checked ~ .box {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.check-chip input:checked ~ .box::after,
+.agree-label input:checked ~ .box::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+.check-chip:has(input:checked) {
+  border-color: var(--teal);
+  background: #eef8f6;
+}
+
+.check-chip input:focus-visible ~ .box,
+.agree-label input:focus-visible ~ .box {
+  outline: 3px solid rgba(15, 118, 110, 0.35);
+  outline-offset: 2px;
+}
+
+/* Upload file */
+.file-drop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 2px dashed #c9b9a5;
+  border-radius: 14px;
+  background: #fffdfa;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.file-drop:hover { border-color: var(--coral); background: #fff7f3; }
+
+.file-drop input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.file-drop:focus-within {
+  outline: 3px solid rgba(15, 118, 110, 0.35);
+  outline-offset: 2px;
+}
+
+.file-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--sun);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.file-text { font-size: 14px; color: var(--muted); }
+.file-text strong { display: block; color: var(--ink); font-size: 15px; }
+
+/* Persetujuan */
+.agree { margin: 6px 0 24px; }
+
+.agree-label {
+  align-items: flex-start;
+  background: #f1f8f6;
+  border-color: #cfe6df;
+  line-height: 1.5;
+}
+
+.agree-label > span:last-child { font-size: 14px; }
+.agree-label .box { margin-top: 2px; }
+
+/* Tombol */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn {
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--coral);
+  color: #fff;
+  box-shadow: 0 10px 22px -12px var(--coral-deep);
+}
+
+.btn-primary:hover { background: var(--coral-deep); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.btn-outline {
+  background: #fff;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn-outline:hover { background: var(--ink); color: #fff; }
+
+.note {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+code {
+  background: #f2ebe1;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 6%;
+  background: var(--ink);
+  color: #cbbfb1;
+  font-size: 13px;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 24px; }
+  .side-panel { position: static; }
+  .radio-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .layout { width: 94%; margin: 22px auto 40px; }
+  .side-panel, .form-panel { padding: 24px 20px; border-radius: 18px; }
+  .form-head h2 { font-size: 26px; }
+  .grid-2, .check-grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .btn { width: 100%; text-align: center; }
+  .btn-ghost { text-align: center; }
+  .site-header, .site-footer { padding-left: 5%; padding-right: 5%; }
+  .header-tag { width: 100%; }
+}

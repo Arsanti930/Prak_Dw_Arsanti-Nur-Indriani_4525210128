@@ -63,4 +63,4 @@ TokoOnline/
 
 ---
 
-&copy; 2026 **Arsanti Nur Indriani** (4525210128) — Fakultas Teknik, Universitas Pancasila.
+&copy; 2026 **Arsanti Nur Indriani** (4525210128) — Fakultas Teknik, Universitas Pancasila.ss
